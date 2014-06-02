@@ -1,0 +1,20 @@
+= Simplecov Phabricator Formatter
+
+The target of this formatter is Phabricator compliant code coverage report. More details at: https://secure.phabricator.com/book/phabricator/article/arcanist_coverage/
+
+= Install
+
+gem install simplecov-phabricator
+
+= Usage
+
+Add the gem to the Gemfile preferably in the group test:
+
+  gem 'simplecov', require: false
+  gem 'simplecov-phabricator', require: false
+
+Enable formatter:
+  require 'simplecov'
+  require 'simplecov-phabricator'
+  SimpleCov.formatter = SimpleCov::Formatter::PhabricatorFormatter
+
